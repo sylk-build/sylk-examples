@@ -4,3 +4,6 @@
 [submodule "todo-app-ts"]
 	path = todo-app-ts
 	url = https://github.com/sylk-build/todo-app-ts.git
+[submodule "todo-app-go"]
+	path = todo-app-go
+	url = https://github.com/sylk-build/todo-app-go.git
