@@ -1,0 +1,21 @@
+// sylk.build Generated proto DO NOT EDIT
+syntax = "proto3";
+
+
+package sylk.Todo.v1;
+
+
+
+// [sylk.Todo.v1.Task] - None
+message Task {
+	string id = 1;
+	string title = 2;
+	string description = 3;
+	bool done = 4;
+}
+
+// [sylk.Todo.v1.TaskId] - None
+message TaskId {
+	string id = 1;
+}
+

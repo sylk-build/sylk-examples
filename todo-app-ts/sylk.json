@@ -1,0 +1,122 @@
+{
+    "organization": {
+        "domain": "sylk"
+    },
+    "configs": {
+        "host": "localhost",
+        "port": 44880
+    },
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts",
+        "name": "todo-app-ts",
+        "packageName": "todoappts",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/clients/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    },
+    "packages": {
+        "protos/v1/Todo.proto": {
+            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/packages/sylk.Todo.v1",
+            "name": "Todo",
+            "package": "sylk.Todo.v1",
+            "messages": [
+                {
+                    "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/messages/sylk.Todo.v1.Task",
+                    "name": "Task",
+                    "fullName": "sylk.Todo.v1.Task",
+                    "fields": [
+                        {
+                            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/fields/sylk.Todo.v1.Task.id",
+                            "name": "id",
+                            "fullName": "sylk.Todo.v1.Task.id",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptors",
+                            "kind": "sylk.descriptor/field",
+                            "index": 1
+                        },
+                        {
+                            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/fields/sylk.Todo.v1.Task.title",
+                            "name": "title",
+                            "fullName": "sylk.Todo.v1.Task.title",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptors",
+                            "kind": "sylk.descriptor/field",
+                            "index": 2
+                        },
+                        {
+                            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/fields/sylk.Todo.v1.Task.description",
+                            "name": "description",
+                            "fullName": "sylk.Todo.v1.Task.description",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptors",
+                            "kind": "sylk.descriptor/field",
+                            "index": 3
+                        },
+                        {
+                            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/fields/sylk.Todo.v1.Task.done",
+                            "name": "done",
+                            "fullName": "sylk.Todo.v1.Task.done",
+                            "fieldType": "TYPE_BOOL",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptors",
+                            "kind": "sylk.descriptor/field",
+                            "index": 4
+                        }
+                    ],
+                    "type": "descriptors",
+                    "kind": "sylk.descriptor/message"
+                },
+                {
+                    "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/messages/sylk.Todo.v1.TaskId",
+                    "name": "TaskId",
+                    "fullName": "sylk.Todo.v1.TaskId",
+                    "fields": [
+                        {
+                            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/fields/sylk.Todo.v1.TaskId.id",
+                            "name": "id",
+                            "fullName": "sylk.Todo.v1.TaskId.id",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptors",
+                            "kind": "sylk.descriptor/field",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptors",
+                    "kind": "sylk.descriptor/message"
+                }
+            ],
+            "type": "packages"
+        }
+    },
+    "services": {
+        "Task": {
+            "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/protos/Task.proto",
+            "name": "Task",
+            "fullName": "sylk.Task.v1",
+            "methods": [
+                {
+                    "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todo-app-ts/methods/GetTask",
+                    "name": "GetTask",
+                    "inputType": "sylk.Todo.v1.TaskId",
+                    "outputType": "sylk.Todo.v1.Task",
+                    "type": "descriptors",
+                    "kind": "sylk.descriptor/method"
+                }
+            ],
+            "type": "services",
+            "dependencies": [
+                "sylk.Todo.v1"
+            ]
+        }
+    }
+}

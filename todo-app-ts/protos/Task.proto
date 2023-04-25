@@ -1,0 +1,12 @@
+// sylk.build Generated proto DO NOT EDIT
+syntax = "proto3";
+
+import "Todo.proto";
+
+
+service Task {
+	// [sylk] - None
+	rpc GetTask (sylk.Todo.v1.TaskId) returns (sylk.Todo.v1.Task);
+}
+
+
