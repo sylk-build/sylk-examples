@@ -1,0 +1,119 @@
+{
+    "organization": {
+        "orgId": "103367183836493333392"
+    },
+    "packages": {
+        "protos/v1/API.proto": {
+            "uri": "103367183836493333392.pubsub/public.API.v1",
+            "name": "API",
+            "package": "public.API.v1",
+            "messages": [
+                {
+                    "uri": "103367183836493333392.pubsub/public.API.v1.Channel",
+                    "name": "Channel",
+                    "fullName": "public.API.v1.Channel",
+                    "fields": [
+                        {
+                            "uri": "103367183836493333392.pubsub/public.API.v1.Channel.Name",
+                            "name": "Name",
+                            "fullName": "public.API.v1.Channel.Name",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "sylk.descriptor/field",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "sylk.descriptor/message"
+                },
+                {
+                    "uri": "103367183836493333392.pubsub/public.API.v1.Event",
+                    "name": "Event",
+                    "fullName": "public.API.v1.Event",
+                    "fields": [
+                        {
+                            "uri": "103367183836493333392.pubsub/public.API.v1.Event.Channel",
+                            "name": "Channel",
+                            "fullName": "public.API.v1.Event.Channel",
+                            "fieldType": "TYPE_MESSAGE",
+                            "label": "LABEL_OPTIONAL",
+                            "messageType": "public.API.v1.Channel",
+                            "type": "descriptor",
+                            "kind": "sylk.descriptor/field",
+                            "index": 1
+                        },
+                        {
+                            "uri": "103367183836493333392.pubsub/public.API.v1.Event.Data",
+                            "name": "Data",
+                            "fullName": "public.API.v1.Event.Data",
+                            "fieldType": "TYPE_MESSAGE",
+                            "label": "LABEL_OPTIONAL",
+                            "messageType": "google.protobuf.Struct",
+                            "type": "descriptor",
+                            "kind": "sylk.descriptor/field",
+                            "index": 2
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "sylk.descriptor/message"
+                }
+            ],
+            "type": "packages",
+            "dependencies": [
+                "google.protobuf.Struct"
+            ]
+        }
+    },
+    "services": {
+        "Pubsub": {
+            "uri": "103367183836493333392.pubsub/public.Pubsub.v1",
+            "name": "Pubsub",
+            "fullName": "public.Pubsub.v1",
+            "methods": [
+                {
+                    "name": "Publish",
+                    "fullName": "public.Pubsub.v1.Publish",
+                    "inputType": "public.API.v1.Event",
+                    "outputType": "google.protobuf.Empty",
+                    "type": "descriptor",
+                    "kind": "sylk.descriptor/method"
+                },
+                {
+                    "name": "Subscribe",
+                    "fullName": "public.Pubsub.v1.Subscribe",
+                    "inputType": "public.API.v1.Channel",
+                    "outputType": "public.API.v1.Event",
+                    "serverStreaming": true,
+                    "type": "descriptor",
+                    "kind": "sylk.descriptor/method"
+                }
+            ],
+            "type": "services",
+            "dependencies": [
+                "public.API.v1",
+                "google.protobuf.Empty"
+            ]
+        }
+    },
+    "configs": {
+        "host": "localhost",
+        "port": 44880
+    },
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/pubsub-go",
+        "name": "pubsub-go",
+        "packageName": "pubsubgo",
+        "clients": [
+            {
+                "language": "python",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/pubsub-go/clients/python"
+            }
+        ],
+        "goPackage": "github.com/pubsub",
+        "server": {
+            "language": "go"
+        },
+        "description": "Publisher Subscriber Service"
+    }
+}

@@ -1,0 +1,19 @@
+// sylk.build Generated proto DO NOT EDIT
+syntax = "proto3";
+
+
+// Go package name
+option go_package = "github.com/pubsubgo/services/protos/Pubsub";
+
+import "API.proto";
+import "google/protobuf/empty.proto";
+
+
+service Pubsub {
+	// [sylk] - None
+	rpc Publish (public.API.v1.Event) returns (google.protobuf.Empty);
+	// [sylk] - None
+	rpc Subscribe (public.API.v1.Channel) returns (stream public.API.v1.Event);
+}
+
+

@@ -1,0 +1,101 @@
+{
+    "organization": {
+        "orgId": "111351872927713598486",
+        "domain": "public"
+    },
+    "packages": {
+        "public/bookstore/book/v1": {
+            "uri": "111351872927713598486.bookstore/public.bookstore.book.v1",
+            "name": "book",
+            "package": "public.bookstore.book.v1",
+            "messages": [
+                {
+                    "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.GetBookRequest",
+                    "name": "GetBookRequest",
+                    "fullName": "public.bookstore.book.v1.GetBookRequest",
+                    "fields": [
+                        {
+                            "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.GetBookRequest.Name",
+                            "name": "Name",
+                            "fullName": "public.bookstore.book.v1.GetBookRequest.Name",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                },
+                {
+                    "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.Book",
+                    "name": "Book",
+                    "fullName": "public.bookstore.book.v1.Book",
+                    "description": "The bookstore main entity \"Book\".",
+                    "fields": [
+                        {
+                            "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.Book.name",
+                            "name": "name",
+                            "fullName": "public.bookstore.book.v1.Book.name",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                }
+            ],
+            "description": "The main package entities",
+            "type": "packages",
+            "dependencies": [
+                "google.protobuf"
+            ],
+            "services": [
+                {
+                    "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.BookStoreService",
+                    "name": "BookStoreService",
+                    "fullName": "public.bookstore.book.v1.BookStoreService",
+                    "methods": [
+                        {
+                            "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.BookStoreService.ListBooks",
+                            "name": "ListBooks",
+                            "fullName": "public.bookstore.book.v1.BookStoreService.ListBooks",
+                            "inputType": "google.protobuf.Empty",
+                            "outputType": "public.bookstore.book.v1.Book",
+                            "serverStreaming": true
+                        },
+                        {
+                            "uri": "111351872927713598486.bookstore/public.bookstore.book.v1.BookStoreService.GetBook",
+                            "name": "GetBook",
+                            "fullName": "public.bookstore.book.v1.BookStoreService.GetBook",
+                            "inputType": "public.bookstore.book.v1.GetBookRequest",
+                            "outputType": "public.bookstore.book.v1.Book"
+                        }
+                    ],
+                    "type": "services"
+                }
+            ]
+        }
+    },
+    "configs": {
+        "host": "localhost",
+        "port": 44880,
+        "protoBasePath": "protos"
+    },
+    "sylkVersion": "0.3.3",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/bookstore-go",
+        "name": "bookstore-go",
+        "packageName": "bookstorego",
+        "clients": [
+            {
+                "language": "go",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/bookstore-go/client/go"
+            }
+        ],
+        "goPackage": "github.com/sylk-build/sylk-examples/bookstore-go",
+        "server": {
+            "language": "go"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+// sylk.build Generated proto DO NOT EDIT
+syntax = "proto3";
+
+
+// Go package name
+option go_package = "github.com/pubsubgo/services/protos/API";
+
+import "google/protobuf/struct.proto";
+package public.API.v1;
+
+
+
+// [public.API.v1.Channel] - None
+message Channel {
+	string Name = 1;
+}
+
+// [public.API.v1.Event] - None
+message Event {
+	public.API.v1.Channel Channel = 1;
+	google.protobuf.Struct Data = 2;
+}
+
