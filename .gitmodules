@@ -10,3 +10,6 @@
 [submodule "todoapp-py"]
 	path = todoapp-py
 	url = https://github.com/sylk-build/todoapp-py.git
+[submodule "todoapp-ts"]
+	path = todoapp-ts
+	url = https://github.com/sylk-build/todoapp-ts.git
