@@ -1,0 +1,155 @@
+{
+    "organization": {
+        "orgId": "111351872927713598486",
+        "domain": "sylklabs"
+    },
+    "packages": {
+        "sylklabs/iot/v1": {
+            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1",
+            "name": "iot",
+            "package": "sylklabs.iot.v1",
+            "messages": [
+                {
+                    "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.PublishRequest",
+                    "name": "PublishRequest",
+                    "fullName": "sylklabs.iot.v1.PublishRequest",
+                    "fields": [
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.PublishRequest.topic",
+                            "name": "topic",
+                            "fullName": "sylklabs.iot.v1.PublishRequest.topic",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 1
+                        },
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.PublishRequest.data",
+                            "name": "data",
+                            "fullName": "sylklabs.iot.v1.PublishRequest.data",
+                            "fieldType": "TYPE_MESSAGE",
+                            "label": "LABEL_OPTIONAL",
+                            "messageType": "sylklabs.iot.v1.SensorData",
+                            "index": 2
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                },
+                {
+                    "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.Topic",
+                    "name": "Topic",
+                    "fullName": "sylklabs.iot.v1.Topic",
+                    "description": "The Topic message represents the topic to which the IoT server and Grafana plugin will subscribe and publish. It will have a single field called name, which is a string representing the name of the topic.",
+                    "fields": [
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.Topic.name",
+                            "name": "name",
+                            "fullName": "sylklabs.iot.v1.Topic.name",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                },
+                {
+                    "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.SensorData",
+                    "name": "SensorData",
+                    "fullName": "sylklabs.iot.v1.SensorData",
+                    "fields": [
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.SensorData.sensor_id",
+                            "name": "sensor_id",
+                            "fullName": "sylklabs.iot.v1.SensorData.sensor_id",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 1
+                        },
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.SensorData.value",
+                            "name": "value",
+                            "fullName": "sylklabs.iot.v1.SensorData.value",
+                            "fieldType": "TYPE_DOUBLE",
+                            "label": "LABEL_OPTIONAL",
+                            "index": 2
+                        },
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.SensorData.timestamp",
+                            "name": "timestamp",
+                            "fullName": "sylklabs.iot.v1.SensorData.timestamp",
+                            "fieldType": "TYPE_MESSAGE",
+                            "label": "LABEL_OPTIONAL",
+                            "messageType": "google.protobuf.Timestamp",
+                            "index": 3
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                }
+            ],
+            "type": "packages",
+            "dependencies": [
+                "google.protobuf"
+            ],
+            "services": [
+                {
+                    "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.IotService",
+                    "name": "IotService",
+                    "fullName": "sylklabs.iot.v1.IotService",
+                    "methods": [
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.IotService.Subscribe",
+                            "name": "Subscribe",
+                            "fullName": "sylklabs.iot.v1.IotService.Subscribe",
+                            "inputType": "sylklabs.iot.v1.Topic",
+                            "outputType": "sylklabs.iot.v1.SensorData",
+                            "serverStreaming": true
+                        },
+                        {
+                            "uri": "111351872927713598486.grafanagrpciot/sylklabs.iot.v1.IotService.Publish",
+                            "name": "Publish",
+                            "fullName": "sylklabs.iot.v1.IotService.Publish",
+                            "inputType": "sylklabs.iot.v1.PublishRequest",
+                            "outputType": "google.protobuf.Empty"
+                        }
+                    ],
+                    "type": "services"
+                }
+            ]
+        }
+    },
+    "configs": {
+        "host": "localhost",
+        "port": 44880,
+        "protoBasePath": "protos"
+    },
+    "sylkVersion": "0.3.4",
+    "project": {
+        "goPackage": "github.com/sylk-build/sylk-examples/sylk-iot",
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-iot/iot-server",
+        "name": "iot-server",
+        "packageName": "iotserver",
+        "clients": [
+            {
+                "language": "python",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-iot/iot-server/client/python"
+            },
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-iot/iot-server/client/typescript"
+            },
+            {
+                "language": "go",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-iot/iot-server/client/go"
+            },
+            {
+                "language": "webpack",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-iot/iot-server/client/webpack"
+            }
+        ],
+        "server": {
+            "language": "go"
+        }
+    }
+}

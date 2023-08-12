@@ -1,0 +1,68 @@
+{
+    "organization": {
+        "domain": "sylklabs"
+    },
+    "configs": {
+        "protoBasePath": "protos",
+        "host": "localhost",
+        "port": 44880
+    },
+    "sylkVersion": "0.3.5",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-simple-js",
+        "name": "sylk-simple-js",
+        "packageName": "sylksimplejs",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-simple-js/client/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    },
+    "packages": {
+        "sylklabs/hello/world/v1": {
+            "name": "world",
+            "package": "sylklabs.hello.world.v1",
+            "messages": [
+                {
+                    "name": "Hello",
+                    "fullName": "sylklabs.hello.world.v1.Hello",
+                    "fields": [
+                        {
+                            "name": "text",
+                            "fullName": "sylklabs.hello.world.v1.Hello.text",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                }
+            ],
+            "type": "package",
+            "services": [
+                {
+                    "name": "HelloWorldService",
+                    "fullName": "sylklabs.hello.world.v1.HelloWorldService",
+                    "methods": [
+                        {
+                            "name": "GetHello",
+                            "fullName": "GetHello",
+                            "inputType": "sylklabs.hello.world.v1.Hello",
+                            "outputType": "sylklabs.hello.world.v1.Hello",
+                            "type": "descriptor",
+                            "kind": "method"
+                        }
+                    ],
+                    "type": "service"
+                }
+            ]
+        }
+    }
+}

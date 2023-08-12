@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+
+  iot-server:
+    build:
+      context: ./iot-server
+    ports:
+      - "44880:44880"
+    networks:
+      - iot-net
+
+  iot-proxy:
+    image: envoyproxy/envoy-alpine:v1.21-latest
+    volumes:
+      - ./iot-proxy/envoy.yaml:/etc/envoy/envoy.yaml
+    command: /usr/local/bin/envoy -c /etc/envoy/envoy.yaml --service-cluster sylk_iot_cluster --service-node sylk_iot
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      - iot-net
+
+  iot-grafana:
+    container_name: 'iot-grafana'
+    build:
+      context: ./iot-grafana/sylk-iot-datasource/.config
+      args:
+        grafana_image: ${GRAFANA_IMAGE:-grafana}
+        grafana_version: ${GRAFANA_VERSION:-9.5.3}
+    ports:
+      - 3000:3000/tcp
+    volumes:
+      - ./iot-grafana/sylk-iot-datasource/dist:/var/lib/grafana/plugins/sylk-iot-datasource
+      - ./iot-grafana/sylk-iot-datasource/provisioning:/etc/grafana/provisioning
+
+  # iot-proxy:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile-client
+  #   depends_on:
+  #     - iot-server
+  #   networks:
+  #     - iot-net
+
+networks:
+  iot-net:

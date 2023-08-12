@@ -1,0 +1,72 @@
+{
+    "organization": {
+        "domain": "sylklabs"
+    },
+    "configs": {
+        "protoBasePath": "protos",
+        "host": "localhost",
+        "port": 44880
+    },
+    "sylkVersion": "0.3.5",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-webhooks-js",
+        "name": "sylk-webhooks-js",
+        "packageName": "sylkwebhooksjs",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-webhooks-js/client/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    },
+    "packages": {
+        "sylklabs/webhooks/v1": {
+            "name": "webhooks",
+            "package": "sylklabs.webhooks.v1",
+            "messages": [
+                {
+                    "name": "Payload",
+                    "fullName": "sylklabs.webhooks.v1.Payload",
+                    "fields": [
+                        {
+                            "name": "data",
+                            "fullName": "sylklabs.webhooks.v1.Payload.data",
+                            "fieldType": "TYPE_MESSAGE",
+                            "label": "LABEL_OPTIONAL",
+                            "messageType": "google.protobuf.Struct",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                }
+            ],
+            "type": "package",
+            "dependencies": [
+                "google.protobuf"
+            ],
+            "services": [
+                {
+                    "name": "WebhookService",
+                    "fullName": "sylklabs.webhooks.v1.WebhookService",
+                    "methods": [
+                        {
+                            "name": "Webhook",
+                            "fullName": "webhooks.v1.WebhookService.Webhook",
+                            "inputType": "sylklabs.webhooks.v1.Payload",
+                            "outputType": "google.protobuf.Empty",
+                            "type": "descriptor",
+                            "kind": "method"
+                        }
+                    ],
+                    "type": "service"
+                }
+            ]
+        }
+    }
+}
