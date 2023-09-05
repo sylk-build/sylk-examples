@@ -36,27 +36,20 @@ This repository contains all you need to integrate real-time streaming data from
     cd sylk-iot
     ```
 
-3. **Install Dependencies**
-
-    ```bash
-    # Your installation command here
-    ```
-
 ## Usage
 
-Example code and usage instructions to get the server and plugin up and running.
-
+Run the docker setup.
 ```bash
-# Your usage examples here
+docker compose up --build -d
 ```
 
 ## Crafting the gRPC IoT Service
 
-Detailed steps and explanations regarding the setup of your gRPC service can be found [here](grpc-setup.md).
+Detailed steps and explanations regarding the setup of your gRPC service can be found [here](./docs/grpc-setup.md).
 
 ## Plugin Architecture
 
-Information on the plugin architecture and how it acts as a bridge between Grafana and gRPC can be found [here](plugin-architecture.md).
+Information on the plugin architecture and how it acts as a bridge between Grafana and gRPC can be found [here](./docs/plugin-architecture.md).
 
 ## Assessment and Future Works
 
