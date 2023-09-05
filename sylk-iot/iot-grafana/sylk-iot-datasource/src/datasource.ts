@@ -28,8 +28,6 @@ export class DataSource extends DataSourceApi<IotQuery, SylkIotDatasourceOptions
     this.client = new IotServiceClient(this.host);
   }
 
-
-
   query(request: DataQueryRequest<IotQuery>): Observable<DataQueryResponse> {
 
     console.log(request.panelId,request.queryGroupId)
