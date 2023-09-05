@@ -1,5 +1,5 @@
 import {
-    GRPCServerBuilder,
+    ServerBuilder,
 } from 'sylk-js';
 
 import {
@@ -7,7 +7,7 @@ import {
     Hello
 } from './services/protos/sylklabs/hello/world/v1/world';
 
-const server = new GRPCServerBuilder();
+const server = new ServerBuilder();
 
 server
     .add(HelloWorldServiceService, {
@@ -22,7 +22,9 @@ server
 server
     .listen('0.0.0.0:44888')
     .then(res => {
+        
         console.log(server.info())
+        
     }).catch(err => {
         console.log(err)
     });

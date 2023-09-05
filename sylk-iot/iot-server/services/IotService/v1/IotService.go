@@ -18,7 +18,6 @@ type IotService struct {
 
 // [sylk.build] - IotService.Subscribe - None
 func (IotServiceServicer *IotService) Subscribe(Topic *iotv1.Topic, stream iotv1.IotService_SubscribeServer) (err error) {
-	// printLog("Subscribe", ctx, Topic)
 
 	topicName := Topic.Name
 

@@ -1,0 +1,25 @@
+{
+    "organization": {
+        "domain": "sylklabs"
+    },
+    "configs": {
+        "host": "localhost",
+        "port": 44880,
+        "protoBasePath": "protos"
+    },
+    "sylkVersion": "0.3.5",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-middlewares-js",
+        "name": "sylk-middlewares-js",
+        "packageName": "sylkmiddlewaresjs",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-middlewares-js/client/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    }
+}

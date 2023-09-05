@@ -16,8 +16,11 @@
     "license": "ISC",
     "dependencies": {
         "@grpc/grpc-js": "^1.6.12",
-        "root": "file:../../../sylk-frameworks/sylk-js",
-        "rxjs": "^7.5.6"
+        "long": "^5.2.3",
+        "protobufjs": "^7.2.4",
+        "rxjs": "^7.5.6",
+        "sylk-js": "file:../../../sylk-frameworks/sylk-js/packages/sylk-js",
+        "sylk-js-health": "file:../../../sylk-frameworks/sylk-js/packages/sylk-js-health"
     },
     "devDependencies": {
         "@types/node": "^18.7.14",

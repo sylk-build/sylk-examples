@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "composite": true,
+        "outDir": "../../lib/protos",
+        "noImplicitReturns": false
+    },
+    "include": [
+        "sylklabs/**/*","google/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

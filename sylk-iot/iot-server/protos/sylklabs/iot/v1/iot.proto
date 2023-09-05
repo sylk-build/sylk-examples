@@ -13,7 +13,6 @@ service IotService {
 	rpc Publish (sylklabs.iot.v1.PublishRequest) returns (google.protobuf.Empty);
 }
 
-
 // [sylklabs.iot.v1.PublishRequest] - 
 message PublishRequest {
 	// [sylklabs.iot.v1.PublishRequest.topic] - 

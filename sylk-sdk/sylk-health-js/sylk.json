@@ -1,0 +1,52 @@
+{
+    "organization": {
+        "domain": "sylklabs"
+    },
+    "configs": {
+        "protoBasePath": "protos",
+        "host": "localhost",
+        "port": 44880
+    },
+    "sylkVersion": "0.3.5",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-health-js",
+        "name": "sylk-health-js",
+        "packageName": "sylkhealthjs",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/sylk-sdk/sylk-health-js/client/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    },
+    "packages": {
+        "sylklabs/unstable/v1": {
+            "name": "unstable",
+            "package": "sylklabs.unstable.v1",
+            "type": "package",
+            "dependencies": [
+                "google.protobuf"
+            ],
+            "services": [
+                {
+                    "name": "UnstabelService",
+                    "fullName": "sylklabs.unstable.v1.UnstabelService",
+                    "methods": [
+                        {
+                            "name": "Shaky",
+                            "fullName": "unstable.v1.UnstabelService.Shaky",
+                            "inputType": "google.protobuf.Struct",
+                            "outputType": "google.protobuf.Empty",
+                            "type": "descriptor",
+                            "kind": "method"
+                        }
+                    ],
+                    "type": "service"
+                }
+            ]
+        }
+    }
+}
